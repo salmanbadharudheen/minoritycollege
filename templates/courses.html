@@ -1,0 +1,157 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Courses | Minority College</title>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <link rel="stylesheet" href="{% static 'css/courses.css' %}">
+</head>
+<body>
+
+    <header class="topbar">
+        <div class="container">
+            <div class="brand">Minority College</div>
+            <nav class="nav">
+                <a href="{% url 'home' %}">Home</a>
+                <a href="{% url 'courses' %}">Courses</a>
+                <a href="{% url 'mandatory_disclosure' %}">Mandatory Disclosure</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="courses-hero">
+        <div class="container">
+            <a href="{% url 'home' %}" class="breadcrumb-link">← Back to Home</a>
+            <h1>Programmes Offered</h1>
+            <p>Explore our AICTE-approved undergraduate and postgraduate programmes</p>
+        </div>
+    </div>
+
+    <main class="container courses-main">
+
+        <section class="courses-section">
+            <h2 class="courses-group-title"><span class="badge-ug">UG</span> Undergraduate Programmes</h2>
+
+            <div class="courses-table-wrap">
+                <table class="courses-table">
+                    <thead>
+                        <tr>
+                            <th>Sl. No</th>
+                            <th>Programme</th>
+                            <th>Permanent Intake</th>
+                            <th>Course Type</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>
+                                <strong>BA English – Honours</strong>
+                                <div class="course-desc">A three-year honours degree exploring literary studies, linguistics, and critical analysis.</div>
+                            </td>
+                            <td class="seats">40</td>
+                            <td><span class="type-tag">Self-Financing</span></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>
+                                <strong>B.Com Finance – Honours</strong>
+                                <div class="course-desc">In-depth study of financial management, accounting, taxation, and commerce principles.</div>
+                            </td>
+                            <td class="seats">60</td>
+                            <td><span class="type-tag">Self-Financing</span></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>
+                                <strong>B.Com Co-Operation – Honours</strong>
+                                <div class="course-desc">Focused on co-operative management, banking, and cooperative sector economics.</div>
+                            </td>
+                            <td class="seats">60</td>
+                            <td><span class="type-tag">Self-Financing</span></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>
+                                <strong>B.Com Computer Application – Honours</strong>
+                                <div class="course-desc">Combines commerce education with practical computer applications and information technology.</div>
+                            </td>
+                            <td class="seats">40</td>
+                            <td><span class="type-tag">Self-Financing</span></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>
+                                <strong>BBA – HRM Honours</strong>
+                                <div class="course-desc">Business administration with a focus on human resource management, organisational behaviour, and people management.</div>
+                            </td>
+                            <td class="seats">50</td>
+                            <td><span class="type-tag">Self-Financing</span></td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>
+                                <strong>BBA – Marketing Honours</strong>
+                                <div class="course-desc">Covers marketing strategy, brand management, consumer behaviour, and digital marketing skills.</div>
+                            </td>
+                            <td class="seats">30</td>
+                            <td><span class="type-tag">Self-Financing</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="courses-section">
+            <h2 class="courses-group-title"><span class="badge-pg">PG</span> Postgraduate Programmes</h2>
+
+            <div class="courses-table-wrap">
+                <table class="courses-table">
+                    <thead>
+                        <tr>
+                            <th>Sl. No</th>
+                            <th>Programme</th>
+                            <th>Permanent Intake</th>
+                            <th>Course Type</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>
+                                <strong>M.Com Finance</strong>
+                                <div class="course-desc">Advanced postgraduate programme in financial analysis, investment management, and commerce research.</div>
+                            </td>
+                            <td class="seats">15</td>
+                            <td><span class="type-tag">Self-Financing</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="courses-info-grid">
+            <div class="info-block">
+                <h3>Eligibility</h3>
+                <p>UG programmes require a minimum of 50% aggregate in qualifying examination (10+2 or equivalent). PG programmes require a relevant Bachelor's degree with a minimum 50% aggregate.</p>
+            </div>
+            <div class="info-block">
+                <h3>Admission Process</h3>
+                <p>Admissions are conducted through the state-level common entrance process. Merit-based selection is followed. Management quota seats are filled as per state government norms.</p>
+            </div>
+            <div class="info-block">
+                <h3>Affiliation & Approval</h3>
+                <p>All programmes are affiliated to the State University and approved by AICTE. The college is recognised by the UGC under Section 2(f) and 12(B).</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        © 2026 Minority College. All rights reserved.
+    </footer>
+
+</body>
+</html>

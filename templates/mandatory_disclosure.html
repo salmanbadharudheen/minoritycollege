@@ -1,0 +1,228 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mandatory Disclosure | Minority College</title>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <link rel="stylesheet" href="{% static 'css/disclosure.css' %}">
+</head>
+<body>
+    <header class="topbar">
+        <div class="container">
+            <div class="brand">Minority College</div>
+            <nav class="nav">
+                <a href="{% url 'home' %}">Home</a>
+                <a href="{% url 'mandatory_disclosure' %}">Mandatory Disclosure</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container page-shell">
+        <div class="breadcrumb">
+            <a href="{% url 'home' %}">← Back to Home</a>
+        </div>
+
+        <section class="page-title">
+            <h1>ANNEXURE-18: Mandatory Disclosure (AICTE)</h1>
+            <p>
+                This page is published as per AICTE Approval Process Handbook requirements.
+                The institution is responsible for authenticity of all disclosed information.
+            </p>
+        </section>
+
+        <section class="disclosure-card">
+            <h2>18.1 Institution Details</h2>
+            <table class="info-table">
+                <tr><th>Name of Institution</th><td>Minority College</td></tr>
+                <tr><th>Address</th><td>101 Education Avenue, City Center, State - PIN</td></tr>
+                <tr><th>Telephone</th><td>+91-00000-00000</td></tr>
+                <tr><th>Mobile</th><td>+91-90000-00000</td></tr>
+                <tr><th>Email</th><td>info@minoritycollege.edu</td></tr>
+            </table>
+        </section>
+
+        <section class="disclosure-card">
+            <h2>18.2 Trust/Society/Company Details</h2>
+            <table class="info-table">
+                <tr><th>Name</th><td>Minority Education Trust</td></tr>
+                <tr><th>Trustees</th><td>Mr. A. Trustee, Ms. B. Trustee, Dr. C. Trustee</td></tr>
+                <tr><th>Address</th><td>Registered Office Address, City, State - PIN</td></tr>
+                <tr><th>Telephone</th><td>+91-00000-00001</td></tr>
+                <tr><th>Mobile</th><td>+91-90000-00001</td></tr>
+                <tr><th>Email</th><td>trust@minoritycollege.edu</td></tr>
+            </table>
+        </section>
+
+        <section class="disclosure-card">
+            <h2>18.3 Principal/Director Details</h2>
+            <table class="info-table">
+                <tr><th>Name</th><td>Dr. Jane Doe, Principal</td></tr>
+                <tr><th>Address</th><td>Principal Office, Minority College Campus</td></tr>
+                <tr><th>Telephone</th><td>+91-00000-00002</td></tr>
+                <tr><th>Mobile</th><td>+91-90000-00002</td></tr>
+                <tr><th>Email</th><td>principal@minoritycollege.edu</td></tr>
+            </table>
+        </section>
+
+        <section class="disclosure-card">
+            <h2>18.4 Affiliation</h2>
+            <p><strong>Affiliating University:</strong> State Technical University (Example Placeholder)</p>
+        </section>
+
+        <section class="disclosure-card">
+            <h2>18.5 Governance</h2>
+            <ul class="disclosure-list">
+                <li>Organizational chart</li>
+                <li>Grievance Redressal mechanism for faculty, staff, and students</li>
+                <li>Establishment of Anti-Ragging Committee</li>
+                <li>Establishment of Online Grievance Redressal Mechanism</li>
+                <li>Details of Grievance Redressal Committee and University Ombudsman</li>
+                <li>Establishment of Internal Committee (IC)</li>
+                <li>Establishment of Committee for SC/ST</li>
+                <li>Internal Quality Assurance Cell</li>
+                <li>Equal Opportunity Facilities Cell</li>
+            </ul>
+        </section>
+
+        <section class="disclosure-card">
+            <h2>18.6 Programmes</h2>
+            <ul class="disclosure-list">
+                <li>Name of programmes approved by AICTE</li>
+                <li>Name of programmes accredited by NBA</li>
+                <li>Status of course accreditation</li>
+                <li>Total number of courses</li>
+                <li>For each programme: Name, number of seats, duration, cut-off marks/rank (last years), and fee approved by state government</li>
+                <li>Twinning/Foreign collaboration details including approvals and student payment details</li>
+                <li>Programme-wise details: focus, seats, admission procedure, and fee</li>
+                <li>Whether collaboration programme is approved by AICTE</li>
+            </ul>
+        </section>
+
+        <section class="disclosure-card">
+            <h2>18.7 Faculty</h2>
+            <ul class="disclosure-list">
+                <li>Course/branch-wise list of faculty members</li>
+                <li>Permanent faculty details</li>
+                <li>Adjunct faculty details</li>
+                <li>Permanent faculty to student ratio</li>
+            </ul>
+        </section>
+
+        <section class="disclosure-card">
+            <h2>18.8 Profile of VC/Director/Principal/Faculty</h2>
+            <ul class="disclosure-list">
+                <li>Name, Date of Birth, Unique ID</li>
+                <li>Educational qualifications and work experience</li>
+                <li>Area of specialization and courses taught</li>
+                <li>Research guidance and publications</li>
+                <li>Master/Ph.D. completed or ongoing</li>
+                <li>Projects, patents, technology transfer, books published</li>
+            </ul>
+        </section>
+
+        <section class="disclosure-card">
+            <h2>18.9 Fee</h2>
+            <ul class="disclosure-list">
+                <li>Fee waivers granted with amount and student names</li>
+                <li>Scholarships offered by institution (duration and amount)</li>
+            </ul>
+        </section>
+
+        <section class="disclosure-card">
+            <h2>18.10 Admission</h2>
+            <ul class="disclosure-list">
+                <li>Number of seats sanctioned with year of approval</li>
+                <li>Number admitted</li>
+            </ul>
+        </section>
+
+        <section class="disclosure-card">
+            <h2>18.11 Admission Procedure</h2>
+            <ul class="disclosure-list">
+                <li>Number of students admitted under categories in last three years</li>
+                <li>Applications received under management quota and admission tests followed</li>
+                <li>Seats allotted to various test-qualified candidates</li>
+                <li>Calendar for management quota admissions (application, results, list release, acceptance)</li>
+                <li>Last date for closing admissions and start of academic session</li>
+                <li>Waiting list activation policy</li>
+                <li>Fee refund policy in case of withdrawal</li>
+            </ul>
+        </section>
+
+        <section class="disclosure-card">
+            <h2>18.12 Criteria and Weightages for Admission</h2>
+            <ul class="disclosure-list">
+                <li>Admission criteria with weightages (test score, qualifying exam marks, etc.)</li>
+                <li>Minimum level of acceptance</li>
+                <li>Cut-off percentage/percentile in last three years</li>
+                <li>Display marks and aggregate of admitted candidates</li>
+            </ul>
+        </section>
+
+        <section class="disclosure-card">
+            <h2>18.13 List of Applicants</h2>
+            <p>
+                List of candidates whose applications are received with percentile/percentage score
+                for qualifying examinations in separate categories (open and management quota merit-wise).
+            </p>
+        </section>
+
+        <section class="disclosure-card">
+            <h2>18.14 Results of Admission Under Management/Vacant Seats</h2>
+            <ul class="disclosure-list">
+                <li>Composition of selection team</li>
+                <li>List of candidates offered admission</li>
+                <li>Waiting list in order of merit</li>
+            </ul>
+        </section>
+
+        <section class="disclosure-card">
+            <h2>18.15 Infrastructure and Other Resources</h2>
+            <ul class="disclosure-list">
+                <li>Classrooms, tutorial rooms, laboratories, and computer centres (with sizes/capacity)</li>
+                <li>Examination facilities and online examination infrastructure</li>
+                <li>Barrier-free environment, fire and safety certification, and hostel facilities</li>
+                <li>Library resources: books, e-books, journals, NDL subscription</li>
+                <li>Lab/Workshop equipment and experimental setups</li>
+                <li>Innovation cell and social media cell</li>
+                <li>Compliance with Academic Bank of Credit (where applicable)</li>
+                <li>Short videos (1-2 min) of infrastructure/course facilities hosted on website</li>
+                <li>Games, sports facilities, and teaching-learning process</li>
+                <li>Postgraduate course-specific laboratory details</li>
+            </ul>
+        </section>
+
+        <section class="disclosure-card">
+            <h2>18.16 Enrolment and Placement</h2>
+            <p>Enrolment and placement details of students for the last three years.</p>
+        </section>
+
+        <section class="disclosure-card">
+            <h2>18.17 Research/Consultancy</h2>
+            <p>List of research projects and consultancy works.</p>
+        </section>
+
+        <section class="disclosure-card">
+            <h2>18.18 MoUs with Industries</h2>
+            <p>List of active MoUs signed with industries and organizations.</p>
+        </section>
+
+        <section class="disclosure-card note-box">
+            <h3>Important AICTE Instruction</h3>
+            <ul class="disclosure-list">
+                <li>LoA/EoA letters (since inception) must be part of the mandatory disclosure.</li>
+                <li>Complete mandatory disclosure should be converted into a single PDF and URL entered in AICTE portal attachments tab.</li>
+                <li>The disclosure must be freely viewable/downloadable without restrictions.</li>
+                <li>The website should be dynamically updated with latest mandatory disclosure information.</li>
+                <li>Suppression or misrepresentation of information may invite penal action.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="footer">
+        © 2026 Minority College. All rights reserved.
+    </footer>
+</body>
+</html>
