@@ -13,6 +13,9 @@
             <div class="brand">
                 <span>Minority Arts and Science College</span>
             </div>
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
             <nav class="nav">
                 <a href="#about">About</a>
                 <a href="{% url 'courses' %}">Courses</a>
@@ -127,12 +130,13 @@
 
         <section id="contact" class="section">
             <h2>Contact Us</h2>
-            <p>Email: minoritycollege@gmail.com | Phone: 04662955000 | Mobile: 8078092052</p>
+            <ul class="contact-list">
+                <li>Email: minoritycollege@gmail.com</li>
+                <li>Phone: 04662955000</li>
+                <li>Mobile: 8078092052</li>
+            </ul>
             <p>Address: Vattapparambu, Othalur Post, Padinjaranghadi, Palakkad Dist, Kerala, 679534 Pin</p>
-            <p>
-                To upload your own homepage images later, place them in the
-                <strong>media/uploads</strong> folder.
-            </p>
+
         </section>
     </main>
 
@@ -145,26 +149,42 @@
 
     <script>
         (function () {
+            /* Slider */
             const slides = document.querySelectorAll('.hero-slider .slide');
             const dots = document.querySelectorAll('.hero-slider .dot');
             let index = 0;
 
-            if (!slides.length) {
-                return;
+            if (slides.length) {
+                const showSlide = (nextIndex) => {
+                    slides[index].classList.remove('active');
+                    dots[index].classList.remove('active');
+                    index = nextIndex;
+                    slides[index].classList.add('active');
+                    dots[index].classList.add('active');
+                };
+
+                setInterval(() => {
+                    showSlide((index + 1) % slides.length);
+                }, 4000);
             }
 
-            const showSlide = (nextIndex) => {
-                slides[index].classList.remove('active');
-                dots[index].classList.remove('active');
-                index = nextIndex;
-                slides[index].classList.add('active');
-                dots[index].classList.add('active');
-            };
-
-            setInterval(() => {
-                const nextIndex = (index + 1) % slides.length;
-                showSlide(nextIndex);
-            }, 4000);
+            /* Mobile nav toggle */
+            const toggle = document.querySelector('.nav-toggle');
+            const nav = document.querySelector('.nav');
+            if (toggle && nav) {
+                toggle.addEventListener('click', () => {
+                    const open = nav.classList.toggle('open');
+                    toggle.classList.toggle('active', open);
+                    toggle.setAttribute('aria-expanded', open);
+                });
+                nav.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        nav.classList.remove('open');
+                        toggle.classList.remove('active');
+                        toggle.setAttribute('aria-expanded', 'false');
+                    });
+                });
+            }
         })();
     </script>
 </body>

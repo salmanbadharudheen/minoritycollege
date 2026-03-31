@@ -49,6 +49,48 @@ body {
     font-weight: 500;
 }
 
+/* Hamburger button – hidden on desktop */
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.4rem;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.nav-toggle span {
+    display: block;
+    width: 26px;
+    height: 3px;
+    background: #ffffff;
+    border-radius: 2px;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.nav-toggle.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.nav-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-toggle.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Contact list */
+.contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 0.8rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+}
+
 .hero-full {
     position: relative;
 }
@@ -361,18 +403,60 @@ body {
         gap: 0.6rem;
     }
 }
-@media (max-width: 540px) {
+
+/* ---- Mobile nav breakpoint ---- */
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: flex;
+    }
+
     .topbar .container {
+        flex-wrap: wrap;
+    }
+
+    .nav {
+        display: none;
+        width: 100%;
         flex-direction: column;
-        align-items: flex-start;
-        gap: 0.5rem;
+        gap: 0;
+        padding: 0.6rem 0 0.2rem;
+    }
+
+    .nav.open {
+        display: flex;
     }
 
     .nav a {
-        margin-left: 0;
-        margin-right: 0.9rem;
+        margin: 0;
+        padding: 0.65rem 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+        font-size: 1rem;
     }
 
+    .hero-overlay {
+        background: linear-gradient(180deg, rgba(11, 33, 57, 0.72) 0%, rgba(11, 33, 57, 0.45) 50%, rgba(11, 33, 57, 0.25) 100%);
+    }
+
+    .hero-content {
+        padding: 0 1rem;
+    }
+
+    .hero-content p {
+        font-size: 0.95rem;
+    }
+
+    .footer p {
+        font-size: 0.85rem;
+        line-height: 1.6;
+    }
+
+    .contact-list {
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+}
+
+@media (max-width: 540px) {
     .brand {
         font-size: 1.02rem;
     }
@@ -383,7 +467,11 @@ body {
     }
 
     .stats {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .stat strong {
+        font-size: 1.3rem;
     }
 
     .course-preview-grid {
@@ -396,10 +484,18 @@ body {
 
     .hero-slider {
         height: 54vh;
-        min-height: 310px;
+        min-height: 280px;
     }
 
     .hero-content h1 {
-        font-size: 1.8rem;
+        font-size: 1.55rem;
+    }
+
+    .section {
+        padding: 1.8rem 0;
+    }
+
+    .section h2 {
+        font-size: 1.3rem;
     }
 }
