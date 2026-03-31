@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Courses | Minority College</title>
+    <title>Courses | Minority Arts and Science College</title>
     <link rel="stylesheet" href="{% static 'css/home.css' %}">
     <link rel="stylesheet" href="{% static 'css/courses.css' %}">
 </head>
@@ -12,7 +12,10 @@
 
     <header class="topbar">
         <div class="container">
-            <div class="brand">Minority College</div>
+            <div class="brand">
+                <img class="brand-logo" src="{% static 'images/logo.png' %}" alt="Minority Arts and Science College logo">
+                <span>Minority Arts and Science College</span>
+            </div>
             <nav class="nav">
                 <a href="{% url 'home' %}">Home</a>
                 <a href="{% url 'courses' %}">Courses</a>
@@ -150,7 +153,10 @@
     </main>
 
     <footer class="footer">
-        © 2026 Minority College. All rights reserved.
+        <p>Minority Arts and Science College</p>
+        <p>Email: minoritycollege@gmail.com | Phone: 04662955000 | Mobile: 8078092052</p>
+        <p>Vattapparambu, Othalur Post, Padinjaranghadi, Palakkad Dist, Kerala, 679534 Pin</p>
+        <p>© 2026 Minority Arts and Science College. All rights reserved.</p>
     </footer>
 
 </body>

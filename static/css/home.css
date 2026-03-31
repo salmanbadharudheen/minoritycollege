@@ -27,8 +27,19 @@ body {
 }
 
 .brand {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
     font-size: 1.3rem;
     font-weight: 700;
+}
+
+.brand-logo {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #ffffff;
 }
 
 .nav a {
@@ -360,6 +371,15 @@ body {
     .nav a {
         margin-left: 0;
         margin-right: 0.9rem;
+    }
+
+    .brand {
+        font-size: 1.02rem;
+    }
+
+    .brand-logo {
+        width: 36px;
+        height: 36px;
     }
 
     .stats {
